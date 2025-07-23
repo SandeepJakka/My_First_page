@@ -1,0 +1,40 @@
+    # Ignore WordPress core files and other common development files
+    # This .gitignore is for a theme, so it assumes you are only committing the theme itself.
+
+    # WordPress specific files - these are outside your theme folder, so they are ignored.
+    /wp-admin/
+    /wp-includes/
+    /wp-content/cache/
+    /wp-content/uploads/
+    /wp-content/upgrade/
+    /wp-content/plugins/ # Ignore other plugins, but if you create a custom plugin, you'd manage its Git separately.
+    /wp-content/themes/*/ # Ignore other themes in the themes folder
+    !/wp-content/themes/My_First_Page/ # EXCEPTION: DO NOT ignore your current theme folder!
+
+    # Database backups and sensitive files
+    *.sql
+    *.sql.gz
+    wp-config.php # IMPORTANT: Never commit wp-config.php as it contains sensitive database credentials.
+    .env # Environment variables file
+
+    # Log files
+    *.log
+    error.log
+    debug.log
+
+    # Composer (if you use PHP dependency management)
+    /vendor/
+    composer.lock
+
+    # Node.js (if you use frontend build tools like Webpack/Gulp)
+    /node_modules/
+    npm-debug.log
+
+    # Operating System / Editor specific files
+    .DS_Store # macOS specific
+    .idea/ # IntelliJ/PHPStorm IDE specific
+    .vscode/ # VS Code specific
+    *.sublime-project
+    *.sublime-workspace
+    Thumbs.db # Windows specific
+    
